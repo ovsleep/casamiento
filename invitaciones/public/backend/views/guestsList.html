@@ -1,0 +1,81 @@
+﻿<h2>Invitados</h2>
+
+<div class="row">
+    <div class="form-group col-sm-3">
+        <input type="text" class="form-control" placeholder="Buscar por nombre" ng-model="search.name">
+    </div>
+    <div class="form-group col-sm-3">
+        <label class="radio-inline"><input type="radio" ng-model="search.confirmed" value="" name="optradio">Todos</label>
+        <label class="radio-inline"><input type="radio" ng-model="search.confirmed" value="yes" name="optradio">Confirmados</label>
+        <label class="radio-inline"><input type="radio" ng-model="search.confirmed" value="no" name="optradio">Rechazados</label>
+        <label class="radio-inline"><input type="radio" ng-model="search.confirmed" value="pending" name="optradio">Pendientes</label>
+    </div>
+</div>
+<table class="table table-condensed">
+    <tr>
+        <td>Numero</td>
+        <td>Nombre</td>
+        <td>Email</td>
+        <td>Visitas (sin confirmar)</td>
+        <!--<td>Enviado</td>-->
+        <td># Max</td>
+        <td># Niños Max</td>
+        <td>Confirmado</td>
+        <td>#</td>
+        <td># Niños</td>
+        <td>Mensaje</td>
+        <td>F. Confirmacion</td>
+    </tr>
+    <tbody>
+        <tr>
+            <th colspan="3"></th>
+            <th><h4>{{resultValue | sumOfValue:'visit'}}</h4></th>
+            <th><h4>{{resultValue | sumOfValue:'quantity'}}</h4></th>
+            <th><h4>{{resultValue | sumOfValue:'kids_quantity'}}</h4></th>
+            <th></th>
+            <th><h4>{{resultValue | sumOfValue:'quantity_confirmed'}}</h4></th>
+            <th><h4>{{resultValue | sumOfValue:'kids_quantity_confirmed'}}</h4></th>
+            <th colspan="2"></th>
+        </tr>
+        <tr ng-repeat="guest in resultValue=(guests | filter: search)">
+            <td>
+                {{guest.number}}
+            </td>
+            <td>
+                {{guest.name}}
+            </td>
+            <td>
+                {{guest.email}}
+            </td>
+            <!--<td>
+                <check value="{{guest.sent ? 'yes' : 'no'}}"></check>
+            </td>-->
+            <td>
+                {{guest.visit}}
+            </td>
+
+            <td>
+                {{guest.quantity}}
+            </td>
+            <td>
+                {{guest.kids_quantity}}
+            </td>
+            <td>
+                <check value="{{guest.confirmed}}"></check>
+            </td>
+            <td>
+                {{guest.quantity_confirmed}}
+            </td>
+            <td>
+                {{guest.kids_quantity_confirmed}}
+            </td>
+            <td style="width:300px">
+                {{guest.message}}
+            </td>
+            <td>
+                {{guest.confirmed_date | date:"dd/MM/yyyy HH:mm"}}
+            </td>
+        </tr>
+        
+    </tbody>
+</table>

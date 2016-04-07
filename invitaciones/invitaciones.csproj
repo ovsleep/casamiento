@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0184E685-83A3-4523-89D9-41F18975A7B1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>invitaciones</RootNamespace>
+    <AssemblyName>invitaciones</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="public\backend\font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="public\backend\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="public\backend\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="public\backend\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\backend\index.html" />
+    <Content Include="public\backend\js\angularFileUpload.js" />
+    <Content Include="public\backend\js\bootstrap.js" />
+    <Content Include="public\backend\js\bootstrap.min.js" />
+    <Content Include="public\backend\js\jquery.js" />
+    <Content Include="public\backend\js\plugins\dataTables\dataTables.bootstrap.js" />
+    <Content Include="public\backend\js\plugins\dataTables\jquery.dataTables.js" />
+    <Content Include="public\backend\js\plugins\flot\excanvas.min.js" />
+    <Content Include="public\backend\js\plugins\flot\flot-data.js" />
+    <Content Include="public\backend\js\plugins\flot\jquery.flot.js" />
+    <Content Include="public\backend\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="public\backend\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="public\backend\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="public\backend\js\plugins\metisMenu\metisMenu.js" />
+    <Content Include="public\backend\js\plugins\metisMenu\metisMenu.min.js" />
+    <Content Include="public\backend\js\plugins\morris\morris-data.js" />
+    <Content Include="public\backend\js\plugins\morris\morris.js" />
+    <Content Include="public\backend\js\plugins\morris\morris.min.js" />
+    <Content Include="public\backend\js\plugins\morris\raphael.min.js" />
+    <Content Include="public\backend\js\sb-admin-2.js" />
+    <Content Include="public\backend\js\ui-bootstrap-tpls-0.11.2.min.js" />
+    <Content Include="public\backend\scripts\controllers\controllers.js" />
+    <Content Include="public\backend\scripts\controllers\DashboardController.js" />
+    <Content Include="public\backend\scripts\controllers\GuestsDumpController.js" />
+    <Content Include="public\backend\scripts\controllers\LoginController.js" />
+    <Content Include="public\backend\scripts\controllers\GuestsController.js" />
+    <Content Include="public\backend\scripts\controllers\GuestsUploaderController.js" />
+    <Content Include="public\backend\scripts\controllers\WelcomeController.js" />
+    <Content Include="public\backend\scripts\directives\directives.js" />
+    <Content Include="public\backend\scripts\services\services.js" />
+    <Content Include="public\backend\styles\bootstrap.css" />
+    <Content Include="public\backend\styles\bootstrap.min.css" />
+    <Content Include="public\backend\styles\plugins\dataTables.bootstrap.css" />
+    <Content Include="public\backend\styles\plugins\metisMenu\metisMenu.css" />
+    <Content Include="public\backend\styles\plugins\metisMenu\metisMenu.min.css" />
+    <Content Include="public\backend\styles\plugins\morris.css" />
+    <Content Include="public\backend\styles\plugins\social-buttons.css" />
+    <Content Include="public\backend\styles\plugins\timeline.css" />
+    <Content Include="public\backend\styles\sb-admin-2.css" />
+    <Content Include="public\backend\styles\styles.css" />
+    <Content Include="public\backend\views\dashboard.html" />
+    <Content Include="public\backend\views\guestsDump.html" />
+    <Content Include="public\backend\views\guestsList.html" />
+    <Content Include="public\backend\views\login.html" />
+    <Content Include="public\backend\views\orders.html" />
+    <Content Include="public\backend\views\guests.html" />
+    <Content Include="public\backend\views\guestsUploader.html" />
+    <Content Include="public\backend\views\users.html" />
+    <Content Include="public\css\blue.css" />
+    <Content Include="public\css\bootstrap-theme.css" />
+    <Content Include="public\css\bootstrap.css" />
+    <Content Include="public\css\brown.css" />
+    <Content Include="public\css\colorbox.css" />
+    <Content Include="public\css\flaticon\flaticon.css" />
+    <Content Include="public\css\flaticon\flaticon.html" />
+    <Content Include="public\css\flaticon\flaticon.svg" />
+    <Content Include="public\css\font-awesome.min.css" />
+    <Content Include="public\css\jquery.scrollSections.css" />
+    <Content Include="public\css\justifiedGallery.min.css" />
+    <Content Include="public\css\override.css" />
+    <Content Include="public\css\owl.carousel.css" />
+    <Content Include="public\css\owl.transitions.css" />
+    <Content Include="public\css\pink.css" />
+    <Content Include="public\css\red.css" />
+    <Content Include="public\css\style.css" />
+    <Content Include="public\fonts\fontawesome-webfont.svg" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\images\arrow_back.png" />
+    <Content Include="public\images\arrow_end.png" />
+    <Content Include="public\images\arrow_start.png" />
+    <Content Include="public\images\blank.gif" />
+    <Content Include="public\images\brown\arrow_back.png" />
+    <Content Include="public\images\brown\arrow_end.png" />
+    <Content Include="public\images\brown\arrow_start.png" />
+    <Content Include="public\images\brown\bullet.png" />
+    <Content Include="public\images\brown\bullet_active.png" />
+    <Content Include="public\images\brown\double_arrow.png" />
+    <Content Include="public\images\brown\envelope_front.png" />
+    <Content Include="public\images\brown\env_back.jpg" />
+    <Content Include="public\images\brown\env_top.png" />
+    <Content Include="public\images\brown\env_top_top.png" />
+    <Content Include="public\images\brown\im_arrow_end.png" />
+    <Content Include="public\images\brown\im_arrow_start.png" />
+    <Content Include="public\images\brown\main_back.jpg" />
+    <Content Include="public\images\brown\paper.jpg" />
+    <Content Include="public\images\bullet.png" />
+    <Content Include="public\images\bullet_active.png" />
+    <Content Include="public\images\close.png" />
+    <Content Include="public\images\controls.png" />
+    <Content Include="public\images\double_arrow.png" />
+    <Content Include="public\images\envelope_front.png" />
+    <Content Include="public\images\env_back.jpg" />
+    <Content Include="public\images\env_top.png" />
+    <Content Include="public\images\env_top_top.png" />
+    <Content Include="public\images\fancybox_loading.gif" />
+    <Content Include="public\images\fancybox_overlay.png" />
+    <Content Include="public\images\fancybox_sprite.png" />
+    <Content Include="public\images\GOPR0354.jpg" />
+    <Content Include="public\images\im_arrow_end.png" />
+    <Content Include="public\images\im_arrow_start.png" />
+    <Content Include="public\images\loading.gif" />
+    <Content Include="public\images\main_back.jpg" />
+    <Content Include="public\images\next.png" />
+    <Content Include="public\images\paper.jpg" />
+    <Content Include="public\images\prev.png" />
+    <Content Include="public\images\venz1.png" />
+    <Content Include="public\images\venz4.png" />
+    <Content Include="public\images\venz5.png" />
+    <Content Include="public\index.html" />
+    <Content Include="public\js\bootstrap.min.js" />
+    <Content Include="public\js\jquery-1.11.0.min.js" />
+    <Content Include="public\js\jquery.colorbox-min.js" />
+    <Content Include="public\js\jquery.countdown.min.js" />
+    <Content Include="public\js\jquery.firefly-0.3-min.js" />
+    <Content Include="public\js\jquery.justifiedGallery.min.js" />
+    <Content Include="public\js\jquery.mousewheel.min.js" />
+    <Content Include="public\js\jquery.plugin.min.js" />
+    <Content Include="public\js\ng-map.min.js" />
+    <Content Include="public\js\owl.carousel.min.js" />
+    <Content Include="public\js\prefixfree.min.js" />
+    <Content Include="public\js\script.js" />
+    <Content Include="public\js\skrollr.min.js" />
+    <Content Include="public\js\ui-bootstrap-tpls-0.12.0.js" />
+    <Content Include="public\scripts\app.js" />
+    <Content Include="public\scripts\RsvpController.js" />
+    <Content Include="public\scripts\services.js" />
+    <Content Include="public\stylesheets\style.css" />
+    <Content Include="public\views\rsvpThank.html" />
+    <Content Include="public\views\rsvpConfirm.html" />
+    <Content Include="public\views\rsvp.html" />
+    <Content Include="routes\auth.js" />
+    <Content Include="routes\guest.js" />
+    <Content Include="routes\backend.js" />
+    <Content Include="routes\index.js" />
+    <Content Include="routes\users.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="views\error.jade" />
+    <Content Include="views\index.jade" />
+    <Content Include="views\layout.jade" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\backend\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="public\backend\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="public\backend\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="public\backend\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="public\backend\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\bordered-pulled.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\core.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\fixed-width.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\font-awesome.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\icons.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\larger.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\list.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\mixins.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\path.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\rotated-flipped.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\spinning.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\stacked.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\less\variables.less" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\font-awesome.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_bordered-pulled.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_core.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_fixed-width.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_icons.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_larger.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_list.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_mixins.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_path.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_rotated-flipped.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_spinning.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_stacked.scss" />
+    <Content Include="public\backend\font-awesome-4.1.0\scss\_variables.scss" />
+    <Content Include="public\backend\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\backend\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\backend\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="public\css\flaticon\flaticon.eot" />
+    <Content Include="public\css\flaticon\flaticon.ttf" />
+    <Content Include="public\css\flaticon\flaticon.woff" />
+    <Content Include="public\css\flaticon\license.pdf" />
+    <Content Include="public\fonts\fontawesome-webfont.eot" />
+    <Content Include="public\fonts\fontawesome-webfont.ttf" />
+    <Content Include="public\fonts\fontawesome-webfont.woff" />
+    <Content Include="public\fonts\fontawesome-webfont.woff2" />
+    <Content Include="public\fonts\FontAwesome.otf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54586</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54586/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

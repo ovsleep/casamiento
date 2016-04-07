@@ -1,0 +1,26 @@
+﻿.hiddenRow {
+    padding: 0 !important;
+}
+
+.order-lines{
+    padding: 10px 0 0 0;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.message-row td{
+        border-top: none !important;
+    padding-bottom: 20px !important;
+}
+
+th {
+    background-color:#f8f8f8;
+}
+
+th h4{
+    font-weight:bold;
+}

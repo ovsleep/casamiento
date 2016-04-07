@@ -1,0 +1,31 @@
+﻿<section class="rsvp" id="rsvp">
+    <div class="container">
+        <h2> Venís?</h2>
+
+        <div class="paper">
+            <div ng-show="visit.guest.confirmed == 'yes'">
+                <!-- End Date of Reservation -->
+                <div class="paper_title">Gracias por confirmar</div>
+
+                <!-- Form -->
+                <div id="div_block_1">
+                    <h3>
+                        Nos vemos pronto!!!
+                    </h3>
+                </div>
+            </div>
+
+            <div ng-show="visit.guest.confirmed == 'no'">
+                <!-- End Date of Reservation -->
+                <div class="paper_title">Tiempo para arrepentirse</div>
+                <countdown date="04/18/2016"></countdown>
+                <p>Dale... que tenes que hacer que es más importante? ;)</p>
+            </div>
+            <p>
+                <br />Cualquier pregunta mandanos un correo a: <br />
+                <a href="mailto:casamientoceciguille@gmail.com">casamientoceciguille@gmail.com</a>
+            </p>
+        </div>
+
+    </div>
+</section>

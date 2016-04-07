@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link href="css/style.css" rel="stylesheet">
+
+<link type="text/css" rel="stylesheet" href="syntaxh/css/shCoreDefault.css">
+<!--<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>-->
+
+
+
+
+</head>
+
+<body>
+
+<div class="page">
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-xs-2 left_sidebar">
+            <div class="left_block">
+                <div class="left_menu">
+                    <ul class="list-unstyled text-right">
+                        <li><a href="#start">Start</a></li>
+                        <li><a href="#color">Color version</a></li>
+                        <li><a href="#slider">Slider in header</a></li>
+                        <li><a href="#music">Music Player</a></li>
+                        <li><a href="#html">HTML Structure</a></li>
+                        <li><a href="#css">CSS Files & Structure</a></li>
+                        <li><a href="#java">Javascript</a></li>
+                        <li><a href="#typo">Typography</a></li>
+                        <li><a href="#book">Booking Form</a></li>
+                        <li><a href="#sources">Sources & Credits</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-10 main_sidebar">
+        
+        	<section id="start">
+            	<h2>Best Day - Responsive One-Page Wedding Template</h2>
+                <hr>
+                
+                <p class="well">
+                Created: Apr 14, 2015<br>
+                latest Update: May 25, 2015<br>
+                By: Maskan<br>
+                <a href="http://themeforest.net/user/maskan" target="_blank">http://themeforest.net/user/maskan</a><br>
+                Email: rodalermakov@gmail.com
+				</p>
+                <p>
+Thank you for purchasing this theme. If you have any questions that are beyond the scope of this help file, please feel free to email via the user page contact form on this page. <a href="http://themeforest.net/user/maskan" target="_blank">http://themeforest.net/user/maskan</a> Thanks so much!
+				</p>
+
+
+            </section>
+            
+<section id="color">
+<h2>Color version</h2>
+            1. Choose a color version (index_brown.html, index_blue.html...)<br />
+            2. Rename index_brown.html(example) to index.html and upload to your host all files
+</section>
+
+<section id="slider">
+<h2>Slider in header</h2>
+        1. Open index_slider.html<br />
+        2. Copy Intro Section<br />
+        <pre class="brush: html">
+&lt;!-- Intro -->
+&lt;section class="home_intro white_txt intro_slider">        
+
+    &lt;!-- Slider -->
+    &lt;div class="slider">
+        &lt;div class="slider_item parallax" data-image="images/back.jpg">&lt;/div>
+        &lt;div class="slider_item parallax" data-image="images/back6.jpg">&lt;/div>
+        &lt;div class="slider_item parallax" data-image="images/back3.jpg">&lt;/div>
+        &lt;div class="slider_item parallax" data-image="images/back4.jpg">&lt;/div>
+    &lt;/div>
+
+    &lt;div class="home_txt" data-0="opacity:1" data-top-bottom="opacity:0">
+        &lt;!-- Intro Text -->
+        
+        &lt;div class="title1 title1_2">Getting Married&lt;/div>
+        &lt;div class="bullet">&lt;span>19 &lt;b>09&lt;/b>&lt;/span>&lt;/div>
+        &lt;div class="title0">2015&lt;/div>
+        &lt;a href="#married" class="intro_down">&lt;span>&lt;i class="fa fa-angle-down">&lt;/i>&lt;/span>&lt;/a>
+    &lt;/div>
+    &lt;div class="into_firefly">&lt;/div>   
+&lt;/section>
+&lt;!-- Intro End -->
+</pre>
+
+        3. Replace "Intro Section" in your choosen file
+</section>
+
+<section id="music">
+    <h2>Music Player</h2>
+    To add music player:<br />
+    1. in header_social section add link to music player
+<pre class="brush: html">
+&lt;!-- Social Buttons -->
+&lt;div class="header_social">
+    &lt;a href="#" class="music">&lt;i class="fa fa-music">&lt;/i>&lt;/a>
+    &lt;a href="#">&lt;i class="fa fa-twitter">&lt;/i>&lt;/a>
+    &lt;a href="#">&lt;i class="fa fa-facebook">&lt;/i>&lt;/a>
+    &lt;a href="#">&lt;i class="fa fa-pinterest">&lt;/i>&lt;/a>
+&lt;/div>  
+</pre>
+2. Add player block with embdedded player before "home_txt" block
+<pre class="brush: html">
+&lt;div class="player">
+    &lt;iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/107825192&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">&lt;/iframe>
+&lt;/div> 
+</pre>
+<a href="http://help.soundcloud.com/customer/portal/articles/102477" target="blank">Documentation</a>
+3. Open index_player.html file and see how it's done
+</section>
+
+          <section id="html">
+            
+
+            	<h2>HTML Structure</h2>
+                <hr>
+                <p>This theme is built upon bootstrap framework and is fully responsive. It adapts to window resolution and looks good on all devices including ipad and iphone.
+    See for yourself (resize your browser).</p>
+            <p class="well">
+    If you would like to read more about bootstrap framework click here :<br>
+                <a href="http://getbootstrap.com/css/"><b>Bootstrap Documentation</b></a>
+                </p>
+                
+              
+                
+                <h3>Page structure</h3>
+                <p>Below you will find default page structure :</p>
+<pre class="brush: html">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+ 
+[css]
+[google fonts]
+ 
+&lt;/head>
+&lt;body>
+ 
+[header]
+	[main menu]
+ 
+ [section Married]
+ [/section]
+ 
+ [section Our Story]
+ [/section]
+ 
+ [section Our Bridal Party]
+ [/section]
+ 
+ [section Where&When]
+ [/section]
+
+ [section Hotel Reservation]
+ [/section]
+
+ [section Our Events]
+ [/section]
+ 
+ [section RSVP]
+ [/section]
+
+ [section Our Gallery]
+ [/section]
+ 
+ [section Gift Registry]
+ [/section]
+  
+[footer]
+ 
+[javascripts]
+ 
+&lt;/body>
+&lt;/html>
+</pre>
+				<h3>Sections</h3>
+                <p>Section is part of page with separate background, has several paramaters that can be changed:</p>
+                <ul>
+                    <li>data-image - path to background image, best resolution is 1920px x 1200px</li>
+                   <li>class "white_txt" - white font in section</li>
+                </ul>
+<pre class="brush: html">
+&lt;section class="video white_txt parallax" id="video" data-image="images/back4.jpg">
+	[section content]
+&lt;/section>
+
+</pre>                
+          
+				<p>Each "Section" coresponds with each menu item.<br>
+                For example : we have 8 menu elements : </p>
+                <ul>
+                	<li>#our_story</li>
+                    <li>#guests</li>
+                    <li>#when_where</li>
+                    <li>#hotel</li>
+                    <li>#events</li>
+                    <li>#rsvp</li>
+                    <li>#gallery</li>
+                    <li>#registry</li>
+                  </ul>
+<pre class="brush: html">
+&lt;ul>
+    &lt;li>&lt;a href="#our_story">&lt;span>01&lt;/span>&lt;b>Our Story&lt;/b>&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#guests">&lt;span>02&lt;/span>&lt;b>Our Bridal Party&lt;/b>&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#when_where">&lt;span>03&lt;/span>&lt;b>When & Where&lt;/b>&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#hotel">&lt;span>04&lt;/span>&lt;b>Hotel Reservation&lt;/b>&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#events">&lt;span>05&lt;/span>&lt;b>Our Events&lt;/b>&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#rsvp">&lt;span>06&lt;/span>&lt;b>RSVP&lt;/b>&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#gallery">&lt;span>07&lt;/span>&lt;b>Our Gallery&lt;/b>&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#registry">&lt;span>08&lt;/span>&lt;b>Gift Registry&lt;/b>&lt;/a>&lt;/li>                    
+&lt;/ul>
+</pre>
+
+<p>So, there are 8 sections with proper id :</p>
+
+<pre class="brush: html">
+&lt;section class="our_story" id="our_story">
+	[section content]
+&lt;/section>
+
+&lt;section class="guests" id="guests">
+	[section content]
+&lt;/section>
+
+&lt;section class="when_where white_txt parallax" id="when_where" data-image="images/back5.jpg" 
+data-bottom-top="opacity:0;" data-bottom="opacity:1;">
+	[section content]
+&lt;/section>
+
+&lt;section class="hotel" id="hotel">
+    [section content]
+&lt;/section>
+
+&lt;section class="our_story events" id="events">
+	[section content]
+&lt;/section>
+
+&lt;section class="rsvp" id="rsvp">
+    [section content]
+&lt;/section>
+
+&lt;section class="gallery" id="gallery">
+    [section content]
+&lt;/section>
+	
+&lt;section class="registry" id="registry">
+	[section content]
+&lt;/section>
+
+</pre>
+			<h3>Logo</h3>
+            <p>You can edit all texts in logo.</p>
+<pre class="brush: html">
+&lt;div class="title1 title1_2">Getting Married&lt;/div>
+&lt;div class="bullet">&lt;span>19 &lt;b>09&lt;/b>&lt;/span>&lt;/div>
+&lt;div class="title0">2015&lt;/div>
+&lt;a href="#married" class="intro_down">&lt;span>&lt;i class="fa fa-angle-down">&lt;/i>&lt;/span>&lt;/a>
+</pre>
+            <h3>Awesome Icons</h3>
+            <p>Awesome Icons Official Page - <a href="http://fontawesome.io/icons/" target="_blank">http://fontawesome.io/icons/</a><br>
+			You can choose from 360+ available icons : </p>
+            <p>
+            <a target="_blank" href="images/icons-list.jpg">
+            	<img alt=" " src="images/icons-list-small.jpg">
+            </a>
+            </p>
+            <p>HTML markup:</p>
+<pre class="brush: html">
+&lt;!-- Awesome Icons -->
+&lt;i class="fa fa-cog">&lt;/i>
+</pre>         
+				<h3>FlatIcon Icons</h3>
+                <p>FlatIcon Icons Official Page - <a href="http://www.flaticon.com/" target="_blank">
+                http://www.flaticon.com/</a><br>
+                FlatIcons are used in all titles. 
+				</p>
+            	
+               	<p>Open this file - "theme"/css/flaticon/flaticon.html to see all possible icons</p>
+               
+                <p>HTML markup:</p>
+<pre class="brush: html">
+&lt;!-- FlatIcons Icons -->
+&lt;i class="flaticon-anniversary1">&lt;/i>
+</pre> 
+
+				        
+            </section>
+            
+            <section id="css">
+            	<h2>CSS Files & Structure</h2>
+                <hr>
+                <p>All of the specific stylings for the page are in style.css ("theme"/css/style.css) file.</p>
+<pre class="brush:html">
+&lt;!-- Theme CSS -->
+&lt;link href="css/style.css" rel="stylesheet">
+</pre>    
+
+			<p>The file is separated into sections using:</p>   
+<pre class="brush:html">
+/*Main Styles*/	
+/*White Text*/	
+/*Header*/		
+/*Intro*/
+/*Married*/
+/*Our Story*/
+/*Slider Buttons*/
+/*Registry*/
+/*RSVP*/
+/*When&Where*/
+/*Footer*/
+/*Guests*/
+/*Responsive*/
+@media (max-width:992px){
+}
+@media (max-width:768px){
+}
+@media (max-width:480px){
+}
+
+</pre>            
+            	<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p>   
+            </section>
+            
+            <section id="java">
+            	<h2>Javascript</h2>
+                <hr>
+                <p>All javascripts are placed in folder "theme"/js. In script.js file we implement all functions calls.
+This theme uses following Javascript files:</p>
+				<ul>
+                	<li>Bootstrap v 3 framework (powerful front-end framework for faster and easier web development)</li>
+                    <li>jQuery v1.11.0 (A fast javascript library that Foodtruckifies how to traverse HTML documents, handle events, perform animations.)</li>
+                    <li>OWL Carousel - Touch enabled jQuery plugin that lets you create beautiful responsive carousel slider.</li>
+                    <li>ColorBox - A lightweight customizable lightbox plugin for jQuery</li>
+                    <li>ScrollR - skrollr allows you to animate any CSS property of any element depending on the horizontal scrollbar position</li>
+                    <li>NiceScroll - Nicescroll is a jquery plugin, for nice scrollbars with a very similar ios/mobile style.</li>
+                    <li>scrollSections - A plugin that allows you to define (full page) sections and scroll between them with mousewheel, keyboard, scrollbar and/or touch moves.</li>
+                    <li>FireFly - Firefly effect</li>
+                    <li>prefixfree - -prefix-free lets you use only unprefixed CSS properties everywhere. It works behind the scenes, adding the current browser’s prefix to any CSS code, only when it’s needed. </li>
+                    <li>JQuery CountDown - A jQuery plugin that sets a div or span to show a countdown to a given time.</li>
+                    
+                </ul>
+
+				<h3>OWL Carousel</h3>
+                <p>Touch enabled jQuery plugin that lets you create beautiful responsive carousel slider.<br>
+				Documentation:<a href="http://owlgraphic.com/owlcarousel/#how-to" target="_blank">http://owlgraphic.com/owlcarousel/#how-to</a>
+                </p>
+                <p>You don't need any special markup. All you need is to wrap your divs(owl works with any type element) inside the container element &lt;div class="owl-carousel">. Class "owl-carousel" is mandatory to apply proper styles that come from owl.carousel.css file.</p>
+<pre class="brush:html">
+&lt;div id="owl-example" class="owl-carousel">
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+...
+&lt;/div>
+</pre>    
+<p>Now call the Owl initializer function and your carousel is ready.</p>
+<pre class="brush:html">
+$("#owl-example").owlCarousel();
+</pre>       
+			
+				<h3>ColorBox - A lightweight customizable lightbox plugin for jQuery</h3>
+                <p>Documentation:<a href="http://www.jacklmoore.com/colorbox/" target="_blank">http://www.jacklmoore.com/colorbox/</a></p>
+                <h3>FireFly - <a href="http://motyar.github.io/firefly/example.html" target="_blank">http://motyar.github.io/firefly/example.html</a></h3>
+                <p>Documentation:<a href="http://www.backslash.gr/content/blog/webdevelopment/10-jquery-firefly-plugin" target="_blank">http://www.backslash.gr/content/blog/webdevelopment/10-jquery-firefly-plugin</a></p>
+
+                <h3>jQuery Scroll Sections Plugin  - A plugin that allows you to define (full page) sections and scroll between them with mousewheel, keyboard, scrollbar and/or touch moves.</h3>
+                <p>Documentation:<a href="https://github.com/guins/jQuery.scrollSections" target="_blank">https://github.com/guins/jQuery.scrollSections</a></p>
+
+                <h3>NiceScroll - http://areaaperta.com/nicescroll/</h3>
+                <p>Documentation:<a href="http://areaaperta.com/nicescroll/" target="_blank">http://areaaperta.com/nicescroll/</a></p>
+
+                <h3>ScrollR - https://github.com/Prinzhorn/skrollr/</h3>
+                <p>Documentation:<a href="https://github.com/Prinzhorn/skrollr" target="_blank">https://github.com/Prinzhorn/skrollr</a></p>
+                
+                <h3>JQuery CountDown - A jQuery plugin that sets a div or span to show a countdown to a given time.</h3>
+                <p>Open file: 'theme'/js/script.js<br>
+				Find next line: /*CountDown*/<br>
+				/*CountDown*/
+                 $('.married_coundown').countdown({until: new Date(2015, 9, 19)});<br>
+                <br>
+				and edit date - Date(2015, 9, 19)
+                </p>
+                <p>
+                    A note on Date - the JavaScript Date constructor expects the year, month, and day as parameters. However, the month ranges from 0 to 11. To make explicit what date is intended (does a month of 3 mean March or April?) I specify the month from 1 to 12 and manually subtract the 1. Thus the following denotes 25 December, 2014.
+
+$(selector).countdown({since: new Date(2014, 12-1, 25)});
+                </p>
+                <p>Documentation:<a href="http://www.keith-wood.name/countdown.html" target="_blank">http://www.keith-wood.name/countdown.html</a></p>
+                
+            </section>
+            
+            <section id="typo">
+            	<h2>Typography</h2>
+                <p>We use google font service to include fonts or font face sets. </p>
+                
+                <ul>
+                	<li><a href="http://www.google.com/fonts/specimen/Roboto+Condensed" target="_blank">Roboto Condensed</a></li>
+                    <li><a href="http://www.google.com/fonts/specimen/Great+Vibes" target="_blank">Great Vibes</a></li>
+                </ul>
+   
+             
+               
+            
+            </section>
+            
+           <section id="book">
+                <h2>Booking Form</h2>
+                <hr>
+                <p>Template comes with ready to use Booking Form.
+                </p>
+                <p>To configure form just edit "theme"/js/script.js and change e-mail to your own at these lines : </p>
+<pre class="brush:js">
+$.ajax({
+        method: "POST",
+        url: "http://formspree.io/your@mail.com",
+        data: dataString,
+        dataType: "json",
+        success: function() {
+        $('#div_'+type).html("<div id='form_send_message'>Thank you for your request, we will contact you as soon as possible.</div>", 1500);   
+    }
+    });
+</pre>
+The Booking Form used http://formspree.io/ script and doesn't need PHP.<br />                
+The Booking Form doesn't work on 'localhost'. Works only on host.                
+            </section>
+            
+          <section id="sources">
+            	<h2>Sources & Credits</h2>
+                <hr>
+            <p>The following sources and files have been used to build up this theme</p>
+              <ul>
+               	  <li>Twitter Bootstrap - <a href="http://twitter.github.com/bootstrap/" target="_blank">http://twitter.github.com/bootstrap/</a></li>
+                  <li>jQuery - <a href="http://www.jquery.com">http://www.jquery.com</a></li>
+                  <li>OWL Carusel - <a href="http://owlgraphic.com/owlcarousel/#how-to" target="_blank">http://owlgraphic.com/owlcarousel/#how-to</a></li>
+                  <li>Font-Awesome - <a href="http://fontawesome.io/" target="_blank">http://fontawesome.io/</a></li>
+                  <li>Flaticon Icons - <a href="http://flaticon.com" target="_blank">http://flaticon.com</a></li>
+                  <li>FireFly - <a href="http://motyar.github.io/firefly/example.html" target="_blank">http://motyar.github.io/firefly/example.html</a></li>
+                  <li>JQuery Countdown - <a href="http://www.keith-wood.name/countdown.html" target="_blank">http://www.keith-wood.name/countdown.html</a></li>
+                  <li>ColorBox - <a href="http://www.jacklmoore.com/colorbox/" target="_blank">http://www.jacklmoore.com/colorbox/</a></li>
+                  <li>prefixfree - <a href="http://leaverou.github.io/prefixfree/" target="_blank">http://leaverou.github.io/prefixfree/</a></li>
+                  <li><a href="http://www.google.com/fonts/specimen/Roboto+Condensed" target="_blank">Roboto Condensed</a></li>
+                  <li><a href="http://www.google.com/fonts/specimen/Great+Vibes" target="_blank">Great Vibes</a></li>
+                  <li>Icons, textures, flowers - <a href="http://www.freepik.com">Designed by Freepik</a></li>
+                  <li>Photos:<br>
+					restaurant<br>
+https://www.flickr.com/photos/justininsd/7659187558<br>
+wedding<br>
+https://www.flickr.com/photos/tophos/sets/72157630287345918<br />
+https://www.flickr.com/photos/azchael/sets/72157633667377474<br />
+https://www.flickr.com/photos/edwarddalmulder/7684104280<br />
+https://www.flickr.com/photos/ryan_polei/sets/72157626746745875
+</li>
+
+                  	
+              </ul>
+              
+              <p>Once again, thank you so much for purchasing this theme. If you have any questions, feel free to email me via my user page <a href="http://themeforest.net/user/maskan" target="_blank">contact form</a>. </p>
+            </section>
+            
+        </div>
+    </div>
+</div>
+</div>
+	
+	<script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="syntaxh/js/shCore.js"></script>
+	<script type="text/javascript" src="syntaxh/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="syntaxh/js/shBrushCss.js"></script>
+    <script type="text/javascript" src="syntaxh/js/shBrushXml.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<h2>Invitados</h2>
+<div class="row">
+    <div class="form-group col-sm-3">
+        <input type="text" class="form-control" placeholder="Buscar por nombre" ng-model="search.name">
+    </div>
+    <div class="form-group col-sm-3">
+        <label class="radio-inline"><input type="radio" ng-model="search.confirmed" value="" name="optradio">Todos</label>
+        <label class="radio-inline"><input type="radio" ng-model="search.confirmed" value="yes" name="optradio">Confirmados</label>
+        <label class="radio-inline"><input type="radio" ng-model="search.confirmed" value="no" name="optradio">Rechazados</label>
+        <label class="radio-inline"><input type="radio" ng-model="search.confirmed" value="pending" name="optradio">Pendientes</label>
+    </div>
+    <div class="form-group col-sm-offset-2 col-sm-3">
+        <label class="radio-inline"><input type="radio" ng-model="search.sent" value="true" name="optradio">Enviados</label>
+        <label class="radio-inline"><input type="radio" ng-model="search.sent" value="false" name="optradio">Sin Enviar</label>
+        <label class="radio-inline"><input type="radio" ng-model="search.sent" value="" name="optradio">Todos</label>
+    </div>
+</div>
+<table class="table table-condensed">
+    <tr>
+        <td>Id</td>
+        <td>Numero</td>
+        <td>Nombre</td>
+        <td>Email</td>
+        <td>Enviado</td>
+        <td># Max</td>
+        <td># Niños Max</td>
+        <td>Confirmado</td>
+        <td>#</td>
+        <td># Niños</td>
+        <td>F. Confirmacion</td>
+    </tr>
+    <tbody>
+        <tr>
+            <th colspan="5"></th>
+            <th><h4>{{resultValue | sumOfValue:'quantity'}}</h4></th>
+            <th><h4>{{resultValue | sumOfValue:'kids_quantity'}}</h4></th>
+            <th></th>
+            <th><h4>{{resultValue | sumOfValue:'quantity_confirmed'}}</h4></th>
+            <th><h4>{{resultValue | sumOfValue:'kids_quantity_confirmed'}}</h4></th>
+            <th colspan="2"></th>
+        </tr>
+        <tr ng-repeat="guest in resultValue=(guests | filter: search)">
+            <td>
+                <span>{{guest._id}}</span>
+            </td>
+            <td>
+                <input class="guest-number form-control" ng-model="guest.number" />
+            </td>
+            <td>
+                <input class="form-control" ng-model="guest.name" />
+            </td>
+            <td>
+                <input class="form-control" ng-model="guest.email" />
+            </td>
+            <td>
+                <input type="checkbox" class="form-control" ng-model="guest.sent" />
+                <!--<input class="guest-number form-control" ng-model="guest.sent" />-->
+            </td>
+            <td>
+                <input class="guest-number form-control" ng-model="guest.quantity" />
+            </td>
+            <td>
+                <input class="guest-number form-control" ng-model="guest.kids_quantity" />
+            </td>
+            <td>
+                <select class="form-control" ng-model="guest.confirmed">
+                    <option value="yes">Si</option>
+                    <option value="no">No</option>
+                    <option value="pending">Pendiente</option>
+                </select>
+                <!--<input type="checkbox" class="form-control" ng-model="guest.confirmed" ng-true-value='yes' ng-false-value='no' />-->
+            </td>
+            <td>
+                <input class="guest-number form-control" ng-model="guest.quantity_confirmed" />
+            </td>
+            <td>
+                <input class="guest-number form-control" ng-model="guest.kids_quantity_confirmed" />
+            </td>
+            <td>
+                <span>{{guest.confirmed_date | date:"dd/MM/yyyy HH:mm"}}</span>
+            </td>
+            <td>
+                <span class="glyphicon glyphicon-floppy-disk" ng-click="save(guest)"></span>
+                <!--<span class="glyphicon glyphicon-remove hidden" ng-click="remove($index)"></span>-->
+            </td>
+        </tr>
+        <tr class="message-row" ng-repeat-end>
+            <td colspan="12">Message: {{guest.message}}</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<button ng-click="saveAll()">Guardar</button>

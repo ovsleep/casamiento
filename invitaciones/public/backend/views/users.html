@@ -1,0 +1,35 @@
+﻿<h2>Usuarios</h2>
+
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Buscar por nombre" ng-model="search.name">
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <td>Nombre</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Telefono</td>
+        <td>Address</td>
+    </tr>
+    <tbody>
+        <tr ng-repeat="user in users | filter: search">
+            <td>
+                {{user.name}}
+            </td>
+            <td>
+                {{user.email}}
+            </td>
+            <td>
+                {{user.password}}
+            </td>
+            <td>
+                {{user.phone}}
+            </td>
+            <td>
+                {{user.address}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />

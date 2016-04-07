@@ -1,0 +1,8 @@
+/data
+/node_modules
+/invitaciones/node_modules
+/invitaciones/*.env
+/emailservice/.env
+/emailservice/settings.env
+/invitaciones/.vs/Invitaciones/v14/.suo
+/loadcsv/segundos.csv

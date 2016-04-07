@@ -1,0 +1,26 @@
+{
+  "name": "invitaciones",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.6",
+    "sendgrid": "^2.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovsleep/casamiento.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ovsleep/casamiento/issues"
+  },
+  "homepage": "https://github.com/ovsleep/casamiento#readme",
+  "description": ""
+}

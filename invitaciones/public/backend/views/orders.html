@@ -1,0 +1,63 @@
+﻿<h2>Pedidos</h2>
+<table class="table table-striped">
+    <tr>
+        <td>Creado</td>
+        <td>Nombre</td>
+        <td>Email</td>
+        <td>Telefono</td>
+        <td>Direccion</td>
+        <td>Comentarios</td>
+        <td>Estado</td>
+        <td></td>
+    </tr>
+    <tbody ng-repeat="order in orders">
+        <tr >
+            <td>{{order.date | date:'dd/MM/yyyy - H:mm'}}</td>
+            <td>{{order.user.name}}</td>
+            <td>{{order.user.email}}</td>
+            <td>{{order.user.phone}}</td>
+            <td>{{order.user.address}}</td>
+            <td>{{order.user.comments}}</td>
+            <td>{{order.status || 'Pendiente'}}</td>
+            <td>
+                <a ng-click="isCollapsed$index = !isCollapsed$index" ng-hide="isCollapsed$index" class="clickable">Ver |</a> 
+                <a ng-click="isCollapsed$index = !isCollapsed$index" ng-hide="!isCollapsed$index" class="clickable">Ocultar |</a> 
+                <span ng-show="order.status == 'Pendiente'"><a ng-click="setOrderStatus(order, 'Listo')">Listo</a> |</span>
+                <span ng-show="order.status == 'Listo'"><a ng-click="setOrderStatus(order, 'Entregado')">Entregado</a> |</span>
+                <a ng-click="deleteOrder($index)">Eliminar</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="hiddenRow"></td>
+            <td colspan="6" class="hiddenRow">
+                <div class="order-lines" collapse="!isCollapsed$index">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Unidad</th>
+                            <th>Precio x Unidad</th>
+                            <th>Comentarios</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr ng-repeat="line in order.lines">
+                            <td>{{line.name}}</td>
+                            <td>{{line.quantity}}</td>
+                            <td>{{line.unit}}</td>
+                            <td>{{line.price | currency}}</td>
+                            <td>{{line.comment}} </td>
+                            <td>{{line.price * line.quantity | currency}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <th>Total</th>
+                            <th>{{order.totalPrice | currency}}</th>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-primary" ng-click="exportOrders()">Exportar</button> 

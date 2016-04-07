@@ -1,0 +1,63 @@
+﻿<section class="rsvp" id="rsvp">
+    <div class="container">
+        <h2> Venís?</h2>
+
+        <div class="paper">
+
+            <!-- End Date of Reservation -->
+            <div class="paper_title">Hola {{visit.guest.name}}, vienen?</div>
+            <br />
+            <!-- Form -->
+            <form id="div_block_1" class="" ng-submit="submit()">
+                <div class="form-group">
+
+                    <!--<label class="radio1" for="yes"> SI</label>
+                    <input type="radio" class="" value="true" ng-model="guest.confirmed" id="yes">
+
+                    <label class="radio1"  for="no">NO</label>
+                    <input type="radio" class="" value="false" ng-model="guest.confirmed" id="no">-->
+
+                    <input id="r1" type="radio" name="group1" class="radio1" value="yes" ng-model="visit.guest.confirmed" />
+                    <label for="r1" style="margin-right:20px">SI</label>
+                    <input id="r2" type="radio" name="group1" class="radio1" value="no" ng-model="visit.guest.confirmed" />
+                    <label for="r2">NO</label>
+                </div>
+
+                <div ng-show="visit.guest.confirmed == 'yes'">
+                    <div class="form-group">
+                        <label class="control-label">Cuantos Adultos?</label>
+                            <select class="form-control" ng-model="visit.guest.quantity_confirmed" ng-options="i as i for i in getOptionsArray(visit.guest.quantity)"></select>
+                    </div>
+                    <div ng-show="visit.guest.kids_quantity > 0">
+                        <div class="form-group">
+                            <label class="control-label">Cuantos Niños?</label>
+                                <select class="form-control" ng-model="visit.guest.kids_quantity_confirmed" ng-options="i as i for i in getOptionsArray(visit.guest.kids_quantity)"></select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Querés dejarnos un mensaje?</label>
+                        <br />
+                        <textarea class="form-control" rows="5" ng-model="visit.guest.message"></textarea>
+                    </div>
+                </div>
+
+                <div ng-show="visit.guest.confirmed == 'no'">
+                    <p>
+                        <i class="fa fa-frown-o"></i>
+                    </p>
+                </div>
+
+                <!---->
+                <div ng-show="visit.guest.confirmed !== ''">
+                    <br>
+                    <input name="" type="submit" value="Enviar" class="btn btn-lg submit_block_1">
+                </div>
+                <p>
+                    Nos vemos pronto!!! <br />Cualquier pregunta mandanos un correo a: <br />
+                    <a href="mailto:casamientoceciguille@gmail.com">casamientoceciguille@gmail.com</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</section>

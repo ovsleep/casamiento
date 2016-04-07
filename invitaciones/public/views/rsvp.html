@@ -1,0 +1,37 @@
+﻿<section class="rsvp" id="rsvp">
+    <div class="container">
+        <h2> Venís?</h2>
+
+        <div class="paper">
+
+            <!-- End Date of Reservation -->
+            <div class="paper_title">Confirma la asistencia</div>
+
+            <!-- Form -->
+            <form id="div_block_1" ng-submit="submit()">
+                <br />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="tel" class="form-control" id="name_block_1" placeholder="Numero de Invitado" ng-model="visit.nro" required>
+                    </div>
+                    <br />
+                    <br />
+                    <p>El número de invitado, lo podés encontrar en el <br />e-mail de la invitación o en la tarjeta impresa</p>
+
+                    <div class="col-sm-12">
+                        <input name="" type="submit" value="Enviar" class="btn btn-lg submit_block_1">
+                    </div>
+                </div>
+
+                <p class="alert alert-danger" ng-show="visit.error">
+                    {{visit.error}}
+                </p>
+                <!-- Form Additional text -->
+                <p>
+                    Nos vemos pronto!!! <br />Cualquier pregunta mandanos un correo a: <br />
+                    <a href="mailto:casamientoceciguille@gmail.com">casamientoceciguille@gmail.com</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
